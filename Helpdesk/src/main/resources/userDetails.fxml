@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="250.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.app.controller.UserDetailsController">
+   <children>
+      <AnchorPane layoutX="14.0" layoutY="14.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="30.0">
+         <children>
+            <Label prefHeight="20.0" prefWidth="60.0" text="login" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="50.0" />
+            <Label prefHeight="20.0" prefWidth="60.0" text="password" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="90.0" />
+            <TextField fx:id="tfLogin" text="Shiro" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0" />
+            <TextField fx:id="tfPass" text="000" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="90.0" />
+         </children>
+      </AnchorPane>
+      <Button mnemonicParsing="false" onMouseClicked="#onClickLogin" prefHeight="25.0" prefWidth="60.0" text="Log in" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" />
+      <Button mnemonicParsing="false" onMouseClicked="#onClickRegister" prefHeight="25.0" prefWidth="60.0" text="Register" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="100.0" />
+      <Button mnemonicParsing="false" onMouseClicked="#onClickCancel" prefHeight="25.0" prefWidth="60.0" text="Cancel" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="20.0" />
+      <Label layoutX="20.0" layoutY="14.0" prefHeight="20.0" text="Users" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+   </children>
+</AnchorPane>

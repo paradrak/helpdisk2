@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.app.controller.TaskDetailsController">
+   <children>
+      <AnchorPane layoutX="14.0" layoutY="14.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="30.0">
+         <children>
+            <Label prefHeight="20.0" prefWidth="60.0" text="id" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+            <Label prefHeight="20.0" prefWidth="60.0" text="title" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="50.0" />
+            <Label prefHeight="20.0" prefWidth="60.0" text="author" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="90.0" />
+            <Label prefHeight="17.0" prefWidth="62.0" text="contractor" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="130.0" />
+            <Label prefHeight="17.0" prefWidth="62.0" text="status" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="170.0" />
+            <Label fx:id="lblTaskId" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+            <TextField fx:id="tfTaskTitle" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0" />
+            <ComboBox fx:id="cbTaskAuthor" layoutX="100.0" layoutY="88.0" prefWidth="150.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="90.0" />
+            <ComboBox fx:id="cbTaskContractor" layoutX="110.0" layoutY="100.0" prefWidth="150.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="130.0" />
+            <ComboBox fx:id="cbTaskStatus" layoutX="120.0" layoutY="110.0" prefWidth="150.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="170.0" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="20.0" layoutY="14.0" prefHeight="20.0" text="Add new / update" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+      <Button mnemonicParsing="false" onMouseClicked="#onClickApply" prefHeight="25.0" prefWidth="60.0" text="Apply" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" />
+      <Button mnemonicParsing="false" onMouseClicked="#onClickDelete" prefHeight="25.0" prefWidth="60.0" text="Delete" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="100.0" />
+      <Button mnemonicParsing="false" onMouseClicked="#onClickCancel" prefHeight="25.0" prefWidth="60.0" text="Cancel" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="20.0" />
+   </children>
+</AnchorPane>

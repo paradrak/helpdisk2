@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.app.controller.MainController">
+   <children>
+      <AnchorPane AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+             <AnchorPane layoutX="-54.0" layoutY="-54.0" prefHeight="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="30.0">
+                 <children>
+                     <Button fx:id="btnLoadTasks" disable="true" layoutX="-3.0" layoutY="9.0" mnemonicParsing="false" onMouseClicked="#onClickLoad" prefHeight="25.0" prefWidth="100.0" text="Load data" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     <Button fx:id="btnAddTask" disable="true" layoutX="104.0" mnemonicParsing="false" onMouseClicked="#onClickAdd" prefHeight="25.0" prefWidth="100.0" text="Add new task" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="110.0" AnchorPane.topAnchor="0.0" />
+                     <Button fx:id="btnUserControl" layoutX="428.0" mnemonicParsing="false" onMouseClicked="#onClickUserControl" prefWidth="80.0" text="Log in" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                 </children>
+             </AnchorPane>
+            <MenuBar AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem fx:id="menuExit" mnemonicParsing="false" onAction="#onExit" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Add" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </AnchorPane>
+      <TabPane layoutX="14.0" layoutY="34.0" prefHeight="200.0" prefWidth="200.0" side="LEFT" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="65.0">
+          <tabs>
+            <Tab closable="false" text="Tasks for me">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                         <TableView fx:id="TblTasksForMe" layoutX="14.0" layoutY="83.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+                             <columns>
+                                <TableColumn fx:id="ColTaskID_forMe" editable="false" prefWidth="60.0" text="ID" />
+                                <TableColumn fx:id="ColTaskTitle_forMe" minWidth="100.0" prefWidth="-1.0" text="Title" />
+                                <TableColumn fx:id="ColTaskAuthor_forMe" minWidth="100.0" prefWidth="-1.0" text="Author" />
+                                <TableColumn fx:id="ColTaskStatus_forMe" minWidth="100.0" prefWidth="-1.0" text="Status" />
+                              <TableColumn fx:id="ColTaskDateTime_forMe" minWidth="100.0" prefWidth="-1.0" text="DateTime" />
+                            </columns>
+                         </TableView>
+                  </children>
+              </AnchorPane>
+            </content>
+            </Tab>
+            <Tab closable="false" text="Tasks from me">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                         <TableView fx:id="TblTasksFromMe" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+                            <columns>
+                               <TableColumn fx:id="ColTaskID_fromMe" prefWidth="60.0" text="ID" />
+                               <TableColumn fx:id="ColTaskTitle_fromMe" minWidth="100.0" prefWidth="-1.0" text="Title" />
+                               <TableColumn fx:id="ColTaskContractor_fromMe" minWidth="100.0" prefWidth="-1.0" text="Contractor" />
+                               <TableColumn fx:id="ColTaskStatus_fromMe" minWidth="100.0" prefWidth="-1.0" text="Status" />
+                              <TableColumn fx:id="ColTaskDateTime_fromMe" minWidth="100.0" prefWidth="-1.0" text="DateTime" />
+                            </columns>
+                         </TableView>
+                     </children>
+                </AnchorPane>
+              </content>
+             </Tab>
+        </tabs>
+       </TabPane>
+      <AnchorPane layoutX="10.0" layoutY="452.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="200.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+         <children>
+            <Label layoutX="14.0" layoutY="12.0" prefWidth="60.0" text="Welcome, " AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="5.0" />
+            <Label fx:id="lblUserName" layoutX="70.0" layoutY="12.0" text="Guest" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="5.0" />
+         </children>
+       </AnchorPane>
+   </children>
+</AnchorPane>
